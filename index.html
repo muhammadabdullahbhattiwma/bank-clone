@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple ATM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-anim"></div>
+
+    <main class="atm">
+      <h1>Simple ATM</h1>
+
+      <section class="screen">
+        <p class="title">Welcome</p>
+        <p id="message">Enter your 4-digit PIN.</p>
+        <p id="subMessage">Demo PIN: 1234</p>
+        <p class="input-preview" id="pinPreview"></p>
+      </section>
+
+      <section class="pin-form">
+        <input
+          id="pinInput"
+          type="password"
+          maxlength="4"
+          inputmode="numeric"
+          placeholder="Enter PIN"
+        />
+        <button id="enterBtn" class="btn primary">Enter</button>
+        <button id="clearBtn" class="btn">Clear</button>
+      </section>
+
+      <section class="result">
+        <p id="balanceText">Balance: --</p>
+      </section>
+
+      <section class="withdraw-form">
+        <input
+          id="withdrawInput"
+          type="number"
+          min="1"
+          step="1"
+          placeholder="Withdraw amount"
+        />
+        <button id="withdrawBtn" class="btn danger">Withdraw</button>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
